@@ -1,0 +1,167 @@
+.container-notched {
+  position:relative;
+  overflow: hidden;
+  border-width: 1px;
+  clip-path: polygon(
+    0% 16px,                 /* top left */
+    16px 0%,                 /* top left */
+    calc(100% - 16px) 0%,    /* top right */
+    100% 16px,               /* top right */
+    100% calc(100% - 16px),  /* bottom right */
+    calc(100% - 16px) 100%,  /* bottom right */
+    16px 100%,               /* bottom left */
+    0 calc(100% - 16px)      /* bottom left */
+  );
+  &__specific-corner {
+    clip-path: polygon(
+      0% 0%,                    /* top left */
+      16px 0%,                 /* top left */
+      calc(100% - 16px) 0%,    /* top right */
+      100% 16px,               /* top right */
+      100% calc(100% - 16px),  /* bottom right */
+      calc(100% - 16px) 100%,  /* bottom right */
+      16px 100%,               /* bottom left */
+      0 calc(100% - 16px)      /* bottom left */
+    );
+  }
+  &__specific-corner-2 {
+    clip-path: polygon(
+      0% 0%,                 /* top left */
+      16px 0%,                 /* top left */
+      calc(100% - 16px) 0%,    /* top right */
+      100% 16px,               /* top right */
+      100% calc(100% - 16px),  /* bottom right */
+      100% 100%,  /* bottom right */
+      16px 100%,               /* bottom left */
+      0 calc(100% - 16px)      /* bottom left */
+    );
+  }
+  &__specific-corner-half {
+    border-width: 1px;
+    border-bottom: none;
+    border-right: none;
+    border-radius: 2px;
+    position: absolute;
+    left: 11px;
+    top: 11px;
+    right: 11px;
+    height: calc(50% - 11px);
+    clip-path: polygon(
+      0% 0%,                 /* top left */
+      8px 0%,                 /* top left */
+      calc(100% - 8px) 0%,    /* top right */
+      100% 8px,               /* top right */
+      100% calc(100% - 8px),  /* bottom right */
+      100% 100%,  /* bottom right */
+      0 100%,               /* bottom left */
+      0 calc(100% - 8px)      /* bottom left */
+    );
+  }
+  &__pained {
+    clip-path: polygon(
+      0% 16px,                 /* top left */
+      16px 0%,                 /* top left */
+      calc(100% - 16px) 0%,    /* top right */
+      100% 16px,               /* top right */
+      100% calc(100% - 16px),  /* bottom right */
+      calc(100% - 16px) 100%,  /* bottom right */
+      16px 100%,               /* bottom left */
+      0 calc(100% - 16px)      /* bottom left */
+    );
+  }
+  &_corner {
+    position: absolute;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    transform: rotate(45deg);
+    &__left-top {
+      top: -11px;
+      left: -11px;
+    }
+    &__left-bottom {
+      bottom: -11px;
+      left: -11px;
+    }
+    &__right-top {
+      top: -11px;
+      right: -11px;
+    }
+    &__right-bottom {
+      bottom: -11px;
+      right: -11px;
+    }
+  }
+  &_corner__mini {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    &__left-top {
+      top: -5px;
+      left: -5px;
+    }
+    &__left-bottom {
+      bottom: -5px;
+      left: -5px;
+    }
+    &__right-top {
+      top: -5px;
+      right: -5px;
+    }
+    &__right-bottom {
+      bottom: -5px;
+      right: -5px;
+    }
+  }
+}
+
+.img-notched {
+  position:relative;
+  overflow: hidden;
+  border-radius: 2px;
+  clip-path: polygon(
+    0% 0,                 /* top left */
+    32px 0%,                 /* top left */
+    calc(100% - 32px) 0%,    /* top right */
+    100% 32px,               /* top right */
+    100% 100%,  /* bottom right */
+    calc(100% - 32px) 100%,  /* bottom right */
+    32px 100%,               /* bottom left */
+    0 calc(100% - 32px)      /* bottom left */
+  );
+}
+.img-test-1 {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("~@/assets/img/img-test-3.jpg");
+  background-size: cover;
+}
+.img-test-2 {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("~@/assets/img/img-test-2.png");
+  background-size: cover;
+}
+.img-test-3 {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url("~@/assets/img/img-test-1.jpg");
+  background-size: cover;
+}
+
+.left-dots {
+  top: 50%;
+  left: 10px;
+  position: absolute;
+  .dot {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+  }
+}
+.right-dot {
+  top: 19px;
+  right: 9px;
+  position: absolute;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+}

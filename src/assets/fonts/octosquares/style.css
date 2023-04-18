@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'TT Octosquares Expanded';
+    src: local('TT Octosquares Expanded Bold'), local('TT-Octosquares-Expanded-Bold'),
+        url('TTOctosquaresExp-Bold.woff2') format('woff2'),
+        url('TTOctosquaresExp-Bold.woff') format('woff'),
+        url('TTOctosquaresExp-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }

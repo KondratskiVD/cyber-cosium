@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Cyberway";
+    src: url("~@/assets/fonts/cyberway/CyberwayRiders.ttf") format('truetype');
+}
+@font-face {
+    font-family: "Dirtchunk";
+    src: url("~@/assets/fonts/dirtchunk/Dirtchunk.otf") format('truetype');
+}
+@font-face {
+    font-family: 'TT Octosquares Expanded';
+    src: local('TT Octosquares Expanded Thin'), local('TT-Octosquares-Expanded-Thin'),
+    url('~@/assets/fonts/octosquares/TTOctosquaresExp-Thin.woff2') format('woff2'),
+    url('~@/assets/fonts/octosquares/TTOctosquaresExp-Thin.woff') format('woff'),
+    url('~@/assets/fonts/octosquares/TTOctosquaresExp-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Octosquares Expanded';
+    src: local('TT Octosquares Expanded Regular'), local('TT-Octosquares-Expanded-Regular'),
+    url('~@/assets/fonts/octosquares/TTOctosquaresExp-Regular.woff2') format('woff2'),
+    url('~@/assets/fonts/octosquares/TTOctosquaresExp-Regular.woff') format('woff'),
+    url('~@/assets/fonts/octosquares/TTOctosquaresExp-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Octosquares Expanded';
+    src: local('TT Octosquares Expanded Bold'), local('TT-Octosquares-Expanded-Bold'),
+    url('~@/assets/fonts/octosquares/TTOctosquaresExp-Bold.woff2') format('woff2'),
+    url('~@/assets/fonts/octosquares/TTOctosquaresExp-Bold.woff') format('woff'),
+    url('~@/assets/fonts/octosquares/TTOctosquaresExp-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.text-cyber {
+    font-family: 'Cyberway', Arial, sans-serif;
+}
+.text-chunk {
+    font-family: 'Dirtchunk', Arial, sans-serif;
+}

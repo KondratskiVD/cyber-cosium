@@ -1,0 +1,79 @@
+@import "reset";
+@import "fonts";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "components/button-notched";
+@import "components/container-notched";
+@import "components/glow";
+
+
+@layer base {
+  :root {
+    --th-green: 190, 254, 59;
+    --th-pink: 252, 30, 255;
+    --th-blue: 1, 255, 255;
+    --th-yellow: 255, 254, 1;
+    --th-dark: rgb(31, 31, 31);
+    --th-gray: 33, 33, 33;
+  }
+}
+
+html, body, #app {
+  min-height: 100vh;
+  height: 100%;
+  font-family: 'TT Octosquares Expanded', Arial, sans-serif;
+}
+
+.bg-hero {
+  @media screen and (min-width: 900px){
+    background-image:  linear-gradient(to bottom, rgba(33,33,33, 0), rgba(31, 31, 31, 0.2) 20%, rgba(33,33,33, 0.9) 40%, rgba(33,33,33, 1) 50%,rgba(33,33,33, 1) 100%), url("~@/assets/img/bg-top.jpg");
+    //background-position: top 90% right 0;
+    background-size: cover;
+  }
+  background-color: var(--th-dark);
+}
+.bg-gero__mobile {
+  @media screen and (max-width: 900px) {
+    background-image: linear-gradient(to bottom, rgba(33, 33, 33, 0), rgba(31, 31, 31, 0.2) 20%, rgba(33, 33, 33, 0.5) 40%, rgba(33, 33, 33, 1) 100%), url("~@/assets/img/bg-top.jpg");
+    background-position: top 0 right 50%;
+    background-size: cover;
+  }
+}
+.bg-grid-lines {
+  display: block;
+  //background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.92)),to(rgba(0,0,0,.92))),-webkit-gradient(linear,left bottom,left top,color-stop(75%,transparent),to(#000)),url("~@/assets/img/grid-lines.svg");
+  background-image: linear-gradient(rgba(31, 31, 31,.92),rgba(0,0,0,.92)),linear-gradient(0deg,rgba(0,0,0,.92) 5%, transparent 75%, rgb(31, 31, 31)),url("~@/assets/img/grid-lines.svg");
+  background-position: 0 0,0 0,50% 0;
+  background-size: auto,auto,105px;
+  background-repeat: repeat,repeat,repeat;
+  background-attachment: scroll,scroll,scroll;
+}
+.text-transparent-black {
+  background: black;
+  color: white;
+  mix-blend-mode: multiply;
+}
+
+li.list-item::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  transform: rotate(-45deg);
+  background-image: url("~@/assets/img/icons/arrow.svg");
+  background-repeat: no-repeat;
+}
+.shadow-spot__green {
+  width: 0px;
+  height: 0px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-box-shadow: 10px 45px 123px 11px rgba(190,254,59,0.75);
+  -moz-box-shadow: 10px 45px 123px 11px  rgba(190,254,59,0.75);
+  box-shadow: 10px 45px 123px 11px  rgba(190,254,59,0.75);
+}
